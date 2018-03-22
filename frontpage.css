@@ -1,0 +1,84 @@
+.galleryWraper{
+    margin-top: 100px;/*20*/
+    text-align: center;
+}
+a{
+    text-decoration: none;
+}
+.navbar{
+    background-color: #fff;
+    margin: auto;
+    border: none;
+    box-shadow: none;
+    top: 0;
+    border-radius: 0;
+    position: fixed;
+    right: 0;
+    left:0;
+    z-index: 1030;
+    min-height: 50px;
+}
+.navbar .navbarWrapper{
+    margin: 0 auto;
+    width: 1164px;
+    background-color: #fff;
+    padding: 0;
+}
+.navbar .nav-logo{
+    float: left;
+    padding: 0 19px;
+    background-color: #fff;
+    margin-right: 0;
+    margin-left: 0;
+}
+.nav-logo a{
+    font-family: "BEYNO";
+    font-size: 25px;
+    color: #1e1e1e;
+}
+li{
+    list-style: none;
+}
+div{
+    display: block;
+}
+.pull-left{
+    float: left !important;
+}
+.nav-brand{
+    margin-left: -15px;
+}
+.logo{
+    width: 130px;
+    background-size: 130px;
+    height: 20px;
+    margin-top: 25px;
+}
+.nav-line{
+    border-bottom: solid 1px #e5e5e5;
+    padding: 0 15px;
+    height: 20px;
+    max-height: initial;
+}
+.nav-right>li{
+    float: right;
+    position: relative;
+    display: block;
+}
+li{
+    text-align: -webkit-match-parent;
+}
+*{
+    box-sizing: border-box;
+}
+.nav-right li a{
+    padding: 0 15px;
+    line-height: 69px;
+    font-size: 14px;
+    text-align: left;
+    color: #1e1e1e;
+}
+.nav-right>li>a{
+    position: relative;
+    display: block;
+}
