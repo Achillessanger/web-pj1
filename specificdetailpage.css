@@ -24,6 +24,7 @@ ul{
 }
 nav{
     overflow: auto;
+    border-bottom: 1px solid #e5e5e5;
 }
 .titlebar{
     position: fixed;
@@ -117,10 +118,15 @@ header h1{
 }
 .paintingdis{
     display: table;
-    width: 100%;
-    padding-top: 180px;
-    margin-right: -15px;
-    margin-left: -15px;
+    width: 1206px;
+    text-align: center;
+    margin: 0 auto;
+    overflow: auto;
+    padding-left: 21px;
+    padding-right: 21px;
+    margin-top: 190px;
+    margin-right: auto;
+    margin-left: auto;
 }
 .paintingpicture{
     display: table-cell;
