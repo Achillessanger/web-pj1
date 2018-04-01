@@ -7,6 +7,7 @@ body{
     margin-right: 5%;
     letter-spacing: 1px;
     font-family: sans-serif;
+    margin-bottom: 0px;
 }
 a{
     text-decoration: none;
@@ -157,7 +158,6 @@ footer{
     background: #000;
     margin-top: 25px;
     padding: 10px 0 15px;
-    font: 12px Arial,sans-serif;
     background-position: bottom;
 }
 .copyright{

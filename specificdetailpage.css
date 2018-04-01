@@ -1,0 +1,305 @@
+@font-face {
+    font-family: BEYNO;
+    src: url("fonts/BEYNO.otf");
+}
+body{
+    margin-left: 5%;
+    margin-right: 5%;
+    letter-spacing: 1px;
+    font-family: Arial,SansSerif;
+    margin-bottom: 0px;
+}
+a{
+    text-decoration: none;
+}
+li{
+    display: inline;
+}
+.dont-change-line{
+    display: inline;
+}
+ul{
+    margin: 0;
+    padding: 0;
+}
+nav{
+    overflow: auto;
+}
+.titlebar{
+    position: fixed;
+    margin: 0 auto;
+    z-index: 1000;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 1164px;
+    background-color: white;
+}
+.navbar{
+    width: 1164px;
+    margin: 0 auto;
+    padding: 0;
+}
+.navbar .hidden-xs{
+    padding-left: 5px;
+}
+.nav-float-left{
+    float: left;
+    line-height: 60px;
+}
+.nav-float-right{
+    float: right;
+
+}
+#ASlogo{
+    font-size: x-large;
+    font-weight: bolder;
+    font-family: BEYNO;
+}
+#ASlogo:link:visited:hover:active{
+    color: #1e1e1e;
+}
+nav ul li img{
+    height: 15px;
+    width: 15px;
+}
+
+.hidden-xs a{
+    line-height: 69px;
+    font-family: Arial,sans-serif;
+    font-size: 14px;
+    text-align: left;
+    color: #1e1e1e;
+    cursor: pointer;
+}
+
+nav ul li .bianse:hover{
+    color: #a19e9d;
+}
+
+
+.line1{
+    margin-top: -5px;
+    width: 1164px;
+    border: none;
+    background-color: #e5e5e5;
+    height: 0.5px;
+}
+
+.paintertitle{
+    width: 1185px;
+    background: white;
+}
+.paintertitlesmaller{
+    background: white;
+    font-size: 14px;
+    color: #999;
+    padding: 20px 0;
+    margin-right: 20px;
+    border-bottom: 1px solid #e5e5e5;
+}
+header h1{
+    color: black;
+    font-size: 14px;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    line-height: 20px;
+}
+.paintername{
+    color: #999999;
+    font-size: 14px;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    line-height: 20px;
+    font-weight: lighter;
+}
+.paintingdis{
+    display: table;
+    width: 100%;
+    padding-top: 180px;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+.paintingpicture{
+    display: table-cell;
+    position: relative;
+    vertical-align: middle;
+    text-align: center;
+    padding: 0 15px;
+}
+.img-col-inner{
+    max-height: 748px;
+    display: inline-block;
+    margin-bottom: 90px;
+    text-align: center;
+}
+.picdetails{
+    display: table-cell;
+    width: 355px;
+    padding: 0 15px;
+    vertical-align: top;
+    text-align: center;
+    color: #898989;
+    max-width: 100%;
+}
+.picdetails h2{
+    text-align: left;
+    margin-top: 15px;
+    font-size: 15px;
+    color: black;
+    margin-bottom: 10px;
+    font-weight: 500;
+    line-height: 1.1px;
+    display: block;
+    margin-bottom: 20px;
+}
+.picdetails h3{
+    font-size: 11px;
+    letter-spacing: .6px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    text-align: left;
+    font-weight: lighter;
+}
+.block1{
+    width: 355px;
+    border-bottom: 1px solid #e5e5e5;
+    margin-right: 10px;
+    display: table;
+}
+
+.buttons{
+   margin-top: 25px;
+}
+.blackbutton{
+    margin-bottom: 15px;
+    background: black;
+    color: white;
+    min-height: 38px;
+    font-size: 10px;
+    min-width: 88px;
+    border: none;
+    outline: none;
+    width: 345px;
+    cursor: pointer;
+
+}
+.blackbutton:hover{
+    background: #ff5500;
+}
+.whitebutton{
+    margin-bottom: 15px;
+    background: white;
+    color: black;
+    min-height: 38px;
+    font-size: 10px;
+    min-width: 88px;
+    border: #e5e5e5 solid thin;
+    outline: none;
+    width: 345px;
+    cursor: pointer;
+}
+.whitebutton:hover{
+    border: black solid thin;
+}
+.picdetails p{
+    color: #a19e9d;
+    text-align: left;
+    font-size: 11px;
+    letter-spacing: .6px;
+    margin-top: 20px;
+    color: black;
+    font-weight: bolder;
+    margin-bottom: 10px;
+}
+.paintingdis .picdetails p a:hover{
+    color: #a19e9d;
+}
+.SMG{
+    color: black;
+    /*border: none;*/
+    /*outline: none;*/
+    /*background: none;*/
+    /*color: black;*/
+    text-align: left;
+    font-size: 11px;
+    letter-spacing: .6px;
+    margin-top: 20px;
+    /*float: left;*/
+    /*font-weight: bolder;*/
+    margin-bottom: 10px;
+    /*margin-left: 0;*/
+    /*padding-left: 0;*/
+    /*cursor: pointer;*/
+}
+.SMG:hover{
+    color: #a19e9d;
+}
+.artistimg{
+    display: table-cell;
+}
+.artistimg img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-top: 15px;
+}
+.artistlink{
+    display: table-cell;
+    vertical-align: top;
+    padding-bottom: 10px;
+
+}
+.artistlink p{
+    font-size: 11px;
+    line-height: 10px;
+    padding-left: 10px;
+    font-weight: lighter;
+    width: 91.666667%;
+}
+.AW{
+    font-size: 11px;
+    line-height: 10px;
+    padding-left: 10px;
+    font-weight: lighter;
+    color: #999999;
+
+    /*border: none;*/
+    /*outline: none;*/
+    /*background: none;*/
+    /*color: #999999;*/
+    /*text-align: left;*/
+    float: left;
+    margin-bottom: 10px;
+    /*margin-left: 0;*/
+    /*padding-left: 0;*/
+    /*cursor: pointer;*/
+    margin-left: 0px;
+    margin-top: 5px;
+}
+.AW:hover{
+    color: #ff5500;
+}
+
+footer{
+    display: block;
+    position: relative;
+    width: 100%;
+    color: white;
+    bottom: 0;
+    height: 30px;
+    background: #000;
+    margin-top: 25px;
+    padding: 10px 0 15px;
+    background-position: bottom;
+}
+.copyright{
+    font: 11px Arial,sans-serif;
+    text-align: center;
+    color: #bcbec0;
+}
+.bianse:hover{
+    color: red;
+}
