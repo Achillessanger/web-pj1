@@ -8,7 +8,7 @@
 <body>
 <header>
     <div class="titlebar">
-    <nav class="navbar">
+    <nav class="navbar" id="nav-already">
         <ul class="nav-float-left dont-change-line">
             <li id="ASlogo">Art Store</li>
             <li id="ASdis">Where you find Genius and EXTROORDINARY</li>
@@ -24,16 +24,45 @@
                 <a id="DetailsPage" class="detailspage-link" href="detailspage.html">详情</a>
             </li>
             <li class="hidden-xs">
-                <a id="LogIn" class="login-link" href="login.html">登陆</a>
+                <a id="LogIn" class="login-link" onclick="loginShow()">登陆</a>
             </li>
             <li class="hidden-xs">
-                <a id="Register" class="register-link" href="register.html">注册</a>
+                <a id="Register" class="register-link" onclick="registerShow()">注册</a>
             </li>
         </ul>
     </nav>
     <hr class="line1">
     </div>
 </header>
+
+<div id="registerdiv" class="pop-up hide">
+        <img src="images/icons/cancel.png" class="pop-box-cancel" onclick="registerHide()">
+        <p class="pop-up-logo">ArtStore</p>
+        <p style="text-align: center;margin-bottom:20px">Register for ArtStore</p>
+        <table>
+            <tr><td><p class="reg-boxs">昵称： </p></td><td><input type="text" placeholder="昵称" class="gray"></td></tr>
+            <tr><td><p class="reg-boxs">密码： </p></td><td><input type="password" placeholder="密码" class="gray"></td></tr>
+            <tr><td><p class="reg-boxs">确认密码： </p></td><td><input type="password" placeholder="确认密码" class="gray"></td></tr>
+            <tr><td><p class="reg-boxs">邮箱： </p></td><td><input type="text" placeholder="邮箱" class="gray"></td></tr>
+            <tr><td><p class="reg-boxs">电话： </p></td><td><input type="text" placeholder="电话" class="gray"></td></tr>
+            <tr><td><p class="reg-boxs">地址： </p></td><td><input type="text" placeholder="地址" class="gray"></td></tr>
+        </table>
+        <p class="reg-yes">REGISTER</p>
+        <p class="reg-already" onclick="registerHide();loginShow()">ALREADY REGISTERED?SIGN IN</p>
+    </div>
+<div id="logindiv" class="pop-up-2 hide">
+    <img src="images/icons/cancel.png" class="pop-box-cancel" onclick="loginHide()">
+    <p class="pop-up-logo">ArtStore</p>
+    <p style="text-align: center;margin-bottom:20px">Please enter your username and password.</p>
+    <table>
+        <tr><p style="text-align: center"><input type="text" placeholder="昵称" class="gray" id="login-username-input"></p></tr>
+        <tr><p style="text-align: center"><input type="password" placeholder="密码" class="gray" id="login-password-input"></p></tr>
+        <tr><p class="remainder" id="r0"></p><p class="remainder hide" id="r1">*密码错误/*用户不存在</p><p class="remainder hide" id="r3">*用户为空</p><p class="remainder hide" id="r4">*密码为空</p></tr>
+    </table>
+    <p class="reg-yes" onclick="loginAffirm()">LOG IN</p>
+    <p class="reg-already" onclick="loginHide() ,registerShow()">CREAT ACCOUNT</p>
+</div>
+
     <div class="galleryWraper hidden-xs">
         <img class="gallery" src="images/frontpage/gallery3.jpg">
     </div>
@@ -77,6 +106,9 @@
             </div>
         </div>
     </div>
+
+
+<script type="text/javascript" src="register.js"></script>
 
 <footer>
     <div>
