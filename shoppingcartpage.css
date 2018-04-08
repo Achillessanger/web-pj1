@@ -1,0 +1,125 @@
+font-face {
+    font-family: BEYNO;
+    src: url("fonts/BEYNO.otf");
+}
+body{
+    margin-left: 5%;
+    margin-right: 5%;
+    letter-spacing: 1px;
+    font-family: Arial,SansSerif;
+    margin-bottom: 0px;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+li{
+    display: inline;
+}
+.dont-change-line{
+    display: inline;
+}
+ul{
+    margin: 0;
+    padding: 0;
+}
+nav{
+    overflow: auto;
+    border-bottom: 1px solid #e5e5e5;
+}
+.titlebar{
+    position: fixed;
+    margin: 0 auto;
+    z-index: 1000;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 1164px;
+    background-color: white;
+}
+.navbar{
+    width: 1164px;
+    margin: 0 auto;
+    padding: 0;
+}
+.navbar .hidden-xs{
+    padding-left: 5px;
+}
+.nav-float-left{
+    float: left;
+    line-height: 60px;
+}
+.nav-float-right{
+    float: right;
+
+}
+.ASlogo{
+    font-size: x-large;
+    font-weight: bolder;
+    font-family: BEYNO;
+}
+#ASlogo{
+    font-size: x-large;
+    font-weight: bolder;
+    font-family: BEYNO;
+}
+
+.ASlogo:link:visited:hover:active{
+    color: #1e1e1e;
+}
+nav ul li img{
+    height: 15px;
+    width: 15px;
+}
+
+.hidden-xs a{
+    line-height: 69px;
+    font-family: Arial,sans-serif;
+    font-size: 14px;
+    text-align: left;
+    color: #1e1e1e;
+    cursor: pointer;
+}
+
+nav ul li .bianse:hover{
+    color: #a19e9d;
+}
+.gosearch:hover{
+    cursor: pointer;
+}
+
+.line1{
+    margin-top: -5px;
+    width: 1164px;
+    border: none;
+    background-color: #e5e5e5;
+    height: 0.5px;
+}
+.welcome{
+    float: right;
+    background: white;
+    padding: 20px 0;
+    margin-right: 20px;
+    overflow: auto;
+    padding-bottom: 0px;
+}
+.welcometitle{
+    overflow: auto;
+    width: 1164px;
+    background: white;
+    border-bottom: 1px solid #e5e5e5;
+}
+.shoppingcart{
+    float: left;
+}
+.shoppinglistdiv{
+    width: 1164px;
+    text-align: center;
+    margin: 0 auto;
+    overflow: auto;
+    padding-left: 21px;
+    padding-right: 21px;
+    margin-top: 140px;
+    margin-right: auto;
+    margin-left: auto;
+}
