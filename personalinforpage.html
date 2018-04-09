@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Account</title>
+    <link rel="stylesheet" href="personalinforpage.css">
+    <link rel="stylesheet" href="login-register.css">
+</head>
+<body>
+<header>
+    <div class="titlebar">
+        <nav class="navbar">
+            <ul class="nav-float-left dont-change-line">
+                <li class="ASlogo" ><a href="frontpage.html" style="color: #1e1e1e">Art Store</a></li>
+                <!--<li class="hidden-xs"><a class="bianse" onclick="loginShow()">登陆</a> or <a class="bianse" onclick="registerShow()">注册</a></li>-->
+            </ul>
+            <ul class="nav-float-right dont-change-line">
+                <li class="hidden-xs"style="line-height: 69px;font-family: Arial,sans-serif;font-size: 14px;text-align: left;color: #1e1e1e;">
+                    <img src="images/icons/user.png">已登录
+                </li>
+                <li class="hidden-xs"><img src="images/icons/cart.png"><a class="bianse" href="shoppingcartpage.html">购物车</a>
+                </li>
+                <!--<li class="hidden-xs">-->
+                    <!--<img src="images/icons/more.png"><a class="bianse" href="logout.gtml">详情</a>-->
+                <!--</li>-->
+                <li class="hidden-xs">
+                    <img src="images/icons/logout.png"><a class="bianse" href="frontpage.html">登出</a>
+                </li>
+                <li class="hidden-xs">
+                    <input type="text" placeholder="search" style="width: 120px">
+                    <img src="images/icons/go_search.png" class="gosearch">
+                </li>
+            </ul>
+        </nav>
+        <div class="welcometitle">
+            <div class="welcome">
+                <p style="display: inline">Welcome <p style="display: inline;color: #ff5500">Ruixin</p></p>
+            </div>
+            <div class="shoppingcart">
+                <ul>
+                    <li><a href="frontpage.html" class="oriange">首页</a></li>
+                    <li><a href="frontpage.html" class="oriange">搜索</a></li>
+                    <li><a href="specificdetailpage.html" class="oriange">详情</a></li>
+                    <li><a href="frontpage.html" class="oriange">发布艺术品</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</header>
+<div class="middle-block">
+    <aside>
+        <table class="personaldetails">
+            <tr>
+                <td>用户：</td>
+                <td>Ruixin Shi</td>
+            </tr>
+            <tr>
+                <td>电话：</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>邮箱：</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>地址：</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>余额：</td>
+                <td>999,000,000 USD</td>
+            </tr>
+            <tr class="rechargetr">
+                <td colspan="2">
+                    <button class="rechargebut">充值信仰</button>
+                </td>
+            </tr>
+        </table>
+    </aside>
+    <div class="right-part">
+        <div class="right-3-vbox">
+            <div class="uploaded">
+                <span style="text-align: left">我上传的艺术品：<br></span>
+                <table class="upload-list">
+                    <tr><td><a href="specificdetailpage.html"><img src="images/works/square-small/001130.jpg"></a> </td></tr>
+                </table>
+            </div>
+            <div class="tobuy">
+                <span>我购买的艺术品：<br></span>
+                <table class="orderform">
+                    <tr>
+                        <td>订单编号：20180401060</td>
+                        <td>商品名称：Sunflowers</td>
+                        <td>订单时间：2018.4.1</td>
+                        <td>订单金额：10,000,000 USD</td>
+                    </tr>
+                    <tr>
+                        <td>订单编号：20180409001/td>
+                        <td>商品名称：The Falling Rocket</td>
+                        <td>订单时间：2018.4.9</td>
+                        <td>订单金额：100,000,000 USD</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+
+
+        <!--<table class="threeparts" style="text-align: left">-->
+            <!--<tr class="things-uploaded">-->
+                <!--<td>-->
+                    <!--<table class="smalltab">-->
+                        <!--<tr class="tit">我上传的艺术品：</tr>-->
+                        <!--<tr></tr>-->
+                    <!--</table>-->
+                <!--</td>-->
+            <!--</tr>-->
+            <!--<tr class="things-tobuy">-->
+                <!--<td>-->
+                    <!--<table class="smalltab">-->
+                        <!--<tr class="tit">我购买的艺术品:</tr>-->
+                        <!--<table class="orderform">-->
+                            <!--<tr>-->
+                                <!--<td>订单编号：20160526060</td>-->
+                                <!--<td>商品名称：Sunflowers</td>-->
+                                <!--<td>订单时间：2018.4.1</td>-->
+                                <!--<td>订单金额：10,000,000 USD</td>-->
+                            <!--</tr>-->
+                        <!--</table>-->
+                    <!--</table>-->
+                <!--</td>-->
+            <!--</tr>-->
+        <!--</table>-->
+    </div>
+</div>
+
+
+</body>
+</html>
