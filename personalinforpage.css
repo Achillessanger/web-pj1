@@ -131,23 +131,34 @@ nav{
 .right-3-vbox span{
     text-align: left;
     padding-left: 0px;
+    color: #898989;
 }
 .right-part{
     text-align: left;
 }
-.upload-list{
-    height: 100px;
-}
-.orderform{
-    margin-top: 5px;
-    border-bottom: 1px #898989 solid;
-    border-top:1px #898989 solid;
+.upload-list,.upload-list{
+    vertical-align: center;
     padding-top: 10px;
     padding-bottom: 10px;
 }
+
+.orderform{
+    font-size: 14px;
+    margin-top: 5px;
+    /*border-bottom: 1px #898989 solid;*/
+    /*border-top:1px #898989 solid;*/
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
 .upload-list img{
     cursor: pointer;
+    margin-right: 20px;
 }
-.tobuy{
+.tobuy,.sold{
     margin-top: 30px;
 }
+.right-3-vbox>div{
+    border-bottom: 1px #898989 solid;
+}
+
