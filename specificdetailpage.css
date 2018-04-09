@@ -407,3 +407,51 @@ footer{
     text-align: center;
     margin: auto;
 }
+
+.pop-addtoSC{
+    position: fixed;
+    z-index: 1200;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    margin: auto;
+    background:white;
+    width: 300px;
+    height: 80px;
+    color: black;
+    border: black 1px solid;
+    font-size: 20px;
+}
+.pop-addtoSC p{
+    text-align: center;
+    vertical-align: center;
+}
+
+.mask {
+    width:175px;
+    height:175px;
+    background:rgba(255,255,0,0.4);
+    position:absolute;
+    top:0;
+    left:0;
+    cursor:move;
+    display:none;
+}
+.big{
+    width:400px;
+    height:400px;
+    position:absolute;
+    top: 200px;
+    right:360px;
+    border:1px solid #ccc;
+    overflow:hidden;
+    display: none;
+}
+#bigbox img{
+    position: absolute;
+}
+#smallbox{
+    position: relative;
+}
+
