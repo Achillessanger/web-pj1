@@ -44,12 +44,20 @@
 </header>
 
    <div class="shoppinglistdiv">
-       <table class="shoppinglisttab">
+       <table class="shoppinglisttab" id="shoppinglisttab">
+           <!--<tr style="display: none;">-->
+               <!--<td width="115" valign="top"></td>-->
+               <!--<td width="200" valign="top"></td>-->
+               <!--<td width="200" valign="top"></td>-->
+               <!--<td width="300" valign="top" style="text-align: left"></td>-->
+               <!--<td width="349" valign="top"></td>-->
+
+           <!--</tr>-->
             <tr>
                 <td width="115" valign="top">
                     <a href="specificdetailpage-registered.html"><img src="images/works/square-small/001020.jpg" class="shoppinglistphoto"></a>
                 </td>
-                <td width="380" valign="top">
+                <td width="200" valign="top">
                     <span class="shoppinglistlabel">
                         <span class="bold">
                             The Blue Period
@@ -60,11 +68,14 @@
                         </span>
                     </span>
                 </td>
-                <td width="320" valign="top">
+                <td width="200" valign="top">
                     <span class="shoppinglistlabel shopplistprice">80,000,000 USD</span>
                 </td>
+                <td width="300" valign="top" style="text-align: left">
+                    <span class="diss">Artists frequently make changes to a painting or reuse a canvas or panel with an image already painted on it.</span>
+                </td>
                 <td width="349" valign="top">
-                    <button class="blackbutton2">DELETE IT</button>
+                    <button class="blackbutton2"onclick="getTDs(this);this.parentNode.parentNode.parentNode.removeChild(this.parentNode.parentNode)">DELETE IT</button>
                     <a href="specificdetailpage-registered.html"><button class="whitebutton2">VIEW DETAILS</button></a>
                 </td>
             </tr>
@@ -72,7 +83,7 @@
                 <td width="115" valign="top">
                     <a href="specificdetailpage-registered.html"><img src="images/works/square-small/001050.jpg" class="shoppinglistphoto"></a>
                 </td>
-                <td width="380" valign="top">
+                <td width="200" valign="top">
                     <span class="shoppinglistlabel">
                         <span class="bold">
                             Self Portrait
@@ -83,11 +94,14 @@
                         </span>
                     </span>
                 </td>
-                <td width="320" valign="top">
+                <td width="200" valign="top">
                     <span class="shoppinglistlabel shopplistprice">76,000,000 USD</span>
                 </td>
+                <td width="300" valign="top" style="text-align: left">
+                    <span class="diss">Picasso was only twenty years old at the time, but he appears considerably older in this portrait. </span>
+                </td>
                 <td width="349" valign="top">
-                    <button class="blackbutton2">DELETE IT</button>
+                    <button class="blackbutton2" onclick="getTDs(this);this.parentNode.parentNode.parentNode.removeChild(this.parentNode.parentNode)">DELETE IT</button>
                     <a href="specificdetailpage-registered.html"><button class="whitebutton2">VIEW DETAILS</button></a>
                 </td>
             </tr>
@@ -95,7 +109,7 @@
                 <td width="115" valign="top">
                     <a href="specificdetailpage-registered.html"><img src="images/works/square-small/019010.jpg" class="shoppinglistphoto"></a>
                 </td>
-                <td width="380" valign="top">
+                <td width="200" valign="top">
                     <span class="shoppinglistlabel">
                         <span class="bold">
                             Self-Portrait with Straw Hat
@@ -106,55 +120,61 @@
                         </span>
                     </span>
                 </td>
-                <td width="320" valign="top">
+                <td width="200" valign="top">
                     <span class="shoppinglistlabel shopplistprice">60,000,000 USD</span>
                 </td>
+                <td width="300" valign="top" style="text-align: left">
+                    <span class="diss">Además de Gauguin, Van Gogh también cambió su autorretrato por el autorretrato de la artista Émile Bernard.</span>
+                </td>
                 <td width="349" valign="top">
-                    <button class="blackbutton2">DELETE IT</button>
+                    <button class="blackbutton2" onclick="getTDs(this);this.parentNode.parentNode.parentNode.removeChild(this.parentNode.parentNode)">DELETE IT</button>
                     <a href="specificdetailpage-registered.html"><button class="whitebutton2">VIEW DETAILS</button></a>
                 </td>
             </tr>
 
         </table>
        <div class="paybutton">
-           <button class="pay">PAY 216,000,000 USD</button>
+           <button class="pay" onclick="addToShoppingCart()">PAY 216,000,000 USD</button>
        </div>
        <div class="welcometitle deletedtitle">
            <div class="shoppingcart">
                <p style="color:#ff5500;">Recently Deleted</p>
            </div>
        </div>
-       <table class="deletedlisttab">
+       <table class="deletedlisttab" id="deletedlisttab">
            <tr>
                <td width="115" valign="top">
-                   <a href="specificdetailpage-registered.html"><img src="images/works/square-small/001020.jpg" class="shoppinglistphoto"></a>
+                   <a href="specificdetailpage-registered.html"><img src="images/works/square-small/018030.jpg" class="shoppinglistphoto"></a>
                </td>
-               <td width="380" valign="top">
+               <td width="200" valign="top">
                     <span class="shoppinglistlabel">
                         <span class="bold">
-                            The Blue Period
+                            Self-Portrait Dedicated to Paul Gauguin
                             <br>
                         </span>
                         <span>
-                            Pablo Picasso
+                            Van Gogh
                         </span>
                     </span>
                </td>
-               <td width="320" valign="top">
+               <td width="200" valign="top">
                    <span class="shoppinglistlabel shopplistprice">80,000,000 USD</span>
                </td>
+               <td width="300" valign="top" style="text-align: left">
+                   <span class="diss">Artists frequently make changes to a painting or reuse a canvas or panel with an image already painted on it.</span>
+               </td>
                <td width="349" valign="top">
-                   <button class="blackbutton2">RESTORE IT</button>
+                   <button class="blackbutton2"onclick="restore(this);this.parentNode.parentNode.parentNode.removeChild(this.parentNode.parentNode)">RESTORE IT</button>
                    <a href="specificdetailpage-registered.html"><button class="whitebutton2">VIEW DETAILS</button></a>
                </td>
            </tr>
        </table>
    </div>
-<footer>
-    <div>
-        <p class="copyright">&copyArtStore.Produced and maintained by Achillessanger at 2018.4.1. All Rights Reserved</p>
-    </div>
-</footer>
+<div id="addtoSC" class="pop-addtoSC hide">
+    <p>结款成功 :)</p>
+</div>
+<script type="text/javascript" src="Buttons.js"></script>
+
 
 </body>
 

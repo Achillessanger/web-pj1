@@ -45,27 +45,35 @@
         <img src="images/icons/cancel.png" class="pop-box-cancel" onclick="registerHide()">
         <p class="pop-up-logo">ArtStore</p>
         <p style="text-align: center;margin-bottom:20px">Register for ArtStore</p>
-        <table>
-            <tr><td><p class="reg-boxs">昵称： </p></td><td><input type="text" placeholder="昵称" class="gray"></td></tr>
-            <tr><td><p class="reg-boxs">密码： </p></td><td><input type="password" placeholder="密码" class="gray"></td></tr>
-            <tr><td><p class="reg-boxs">确认密码： </p></td><td><input type="password" placeholder="确认密码" class="gray"></td></tr>
-            <tr><td><p class="reg-boxs">邮箱： </p></td><td><input type="text" placeholder="邮箱" class="gray"></td></tr>
-            <tr><td><p class="reg-boxs">电话： </p></td><td><input type="text" placeholder="电话" class="gray"></td></tr>
-            <tr><td><p class="reg-boxs">地址： </p></td><td><input type="text" placeholder="地址" class="gray"></td></tr>
-        </table>
-        <p class="reg-yes">REGISTER</p>
+        <form>
+            <table>
+                <tr><td><p class="reg-boxs">昵称： </p></td><td><input type="text" placeholder="昵称" class="gray" id="in1"></td><td class="remainder2 hide" id="rm1">*至少六位</td><td class="remainder2 hide" id="rm2">*需要数字和字母</td><td class="remainder2 hide" id="rm3">*不可为空</td></tr>
+                <tr><td><p class="reg-boxs">密码： </p></td><td><input type="password" placeholder="密码" class="gray"id="in2" onclick="c1()"></td><td class="remainder2 hide" id="rm4">*至少六位</td><td class="remainder2 hide" id="rm5">*不能与昵称相同</td><td class="remainder2 hide" id="rm6">*不可为空</td></tr>
+                <tr><td><p class="reg-boxs">确认密码： </p></td><td><input type="password" placeholder="确认密码" class="gray"id="in3" onclick="c1();c2()"></td><td class="remainder2 hide" id="rm7">*需与密码相同</td></tr>
+                <tr><td><p class="reg-boxs">邮箱： </p></td><td><input type="text" placeholder="邮箱" class="gray"id="in4" onclick="c3();c2();c1()"></td><td class="remainder2 hide" id="rm8">*不得为空</td><td class="remainder2 hide" id="rm9">*格式不正确</td></tr>
+                <tr><td><p class="reg-boxs">电话： </p></td><td><input type="text" placeholder="电话" class="gray"id="in5" onclick="c1();c2();c3();c4()"></td><td class="remainder2 hide" id="rm10">*不得为空</td><td class="remainder2 hide" id="rm11">*格式不正确</td></tr>
+                <tr><td><p class="reg-boxs">地址： </p></td><td><input type="text" placeholder="地址" class="gray"id="in6" onclick="c5();c4();c3();c2();c1()"></td><td class="remainder2" id="rm12">*</td></tr>
+                <tr><td><input type="reset" id="resetbut" style="display: none"></td></tr>
+            </table>
+        </form>
+        <p class="reg-yes" onclick="registeSpeP()">REGISTER</p>
         <p class="reg-already" onclick="registerHide();loginShow()">ALREADY REGISTERED?SIGN IN</p>
     </div>
     <div id="logindiv" class="pop-up-2 hide">
         <img src="images/icons/cancel.png" class="pop-box-cancel" onclick="loginHide()">
         <p class="pop-up-logo">ArtStore</p>
         <p style="text-align: center;margin-bottom:20px">Please enter your username and password.</p>
-        <table>
-            <tr><p style="text-align: center"><input type="text" placeholder="昵称" class="gray"></p></tr>
-            <tr><p style="text-align: center"><input type="password" placeholder="密码" class="gray"></p></tr>
-        </table>
-        <p class="reg-yes">LOG IN</p>
-        <p class="reg-already" onclick="loginHide() ,registerShow()">CREAT ACCOUNT</p>
+        <form>
+            <table>
+                <tr><p style="text-align: center"><input type="text" placeholder="昵称" class="gray" id="login-username-input"></p></tr>
+                <tr><p style="text-align: center"><input type="password" placeholder="密码" class="gray" id="login-password-input"></p></tr>
+                <tr><p><input type="text" placeholder="验证码" class="gray" id="login-ic-input"><input type = "button" id="code" onclick="createCode()" value="点击获取">  </tr>
+                <tr><p class="remainder" id="r0"></p><p class="remainder hide" id="r1">*密码错误/*用户不存在</p><p class="remainder hide" id="r3">*用户为空</p><p class="remainder hide" id="r4">*密码为空</p><p class="remainder hide" id="r5">*验证码错误</p></tr>
+                <tr><input type="reset" style="display: none" id="loginreset"> </tr>
+            </table>
+            <p class="reg-yes" onclick="loginAffirmSpeP()">LOG IN</p>
+            <p class="reg-already" onclick="loginHide() ,registerShow()">CREAT ACCOUNT</p>
+        </form>
     </div>
 
     <div class="paintingdis">

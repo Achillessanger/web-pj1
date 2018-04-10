@@ -161,4 +161,6 @@ nav{
 .right-3-vbox>div{
     border-bottom: 1px #898989 solid;
 }
-
+.personaldetails td{
+    text-align: left;
+}

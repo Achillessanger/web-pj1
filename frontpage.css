@@ -273,3 +273,23 @@ footer{
 /*.gosearch:hover{*/
     /*cursor: pointer;*/
 /*}*/
+
+.pop-addtoSC{
+    position: fixed;
+    z-index: 1200;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    margin: auto;
+    background:white;
+    width: 300px;
+    height: 80px;
+    color: black;
+    border: black 1px solid;
+    font-size: 20px;
+}
+.pop-addtoSC p{
+    text-align: center;
+    vertical-align: center;
+}

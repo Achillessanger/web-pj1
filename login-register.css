@@ -121,8 +121,9 @@ nav ul li a:hover{
     text-align: center;
 }
 #registerdiv table{
-    text-align: center;
+    /*text-align: center;*/
     margin: auto;
+    margin-left: 97.78px;
 }
 .pop-box-cancel{
     float: right;
@@ -163,7 +164,7 @@ nav ul li a:hover{
     margin: auto;
     background:white;
     width: 400px;
-    height: 250px;
+    height: 290px;
     color: #898989;
     font-size: 11px;
 }
@@ -185,6 +186,35 @@ nav ul li img{
 .gosearch:hover{
     cursor: pointer;
 }
+
+.remainder2{
+    font-size: 9px;
+    color: red;
+}
+#login-ic-input{
+    width: 65px;
+    margin-left: 134px;
+}
+#code{
+
+    width: 60px;
+    margin: 0;
+    padding: 0;
+    margin-left: 5px;
+    background-color: black;
+    color: #e5e5e5;
+    outline: none;
+    border:none;
+    height: 20px;
+}
+
+
+
+
+
+
+
+
 
 footer{
     display: block;
