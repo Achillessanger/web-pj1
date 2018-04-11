@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Search</title>
+    <link rel="stylesheet" href="searchpage.css">
+    <link rel="stylesheet" href="login-register.css">
+</head>
+<body>
+<div class="titlebar">
+    <nav class="navbar">
+        <ul class="nav-float-left dont-change-line">
+            <li class="ASlogo" ><a href="frontpage.html" style="color: #1e1e1e">Art Store</a></li>
+            <li class="hidden-xs"><a class="bianse" onclick="loginShow()">登陆</a> or <a class="bianse" onclick="registerShow()">注册</a></li>
+        </ul>
+        <ul class="nav-float-right dont-change-line">
+            <li class="hidden-xs">
+                <img src="images/icons/user.png"><a onclick="loginShow()">未登录</a>
+            </li>
+            <!--<li class="hidden-xs"><img src="images/icons/cart.png"><a class="bianse" href="shoppingcartpage.html">购物车</a>-->
+            <!--</li>-->
+            <!--<li class="hidden-xs">-->
+            <!--<img src="images/icons/logout.png"><a class="bianse" href="logout.gtml">登出</a>-->
+            <!--</li>-->
+            <!--<li class="hidden-xs">-->
+                <!--<img src="images/icons/more.png"><a class="bianse" href="specificdetailpage.html">详情</a>-->
+            <!--</li>-->
+            <li class="hidden-xs">
+                <img src="images/icons/go_search.png" class="gosearch" id="searchimg" onclick="toogle()">
+            </li>
+        </ul>
+    </nav>
+    <div class="searchbar" id = "searchbar">
+        <img src="images/icons/go_search.png" class="gosearch" style="width: 15px;height: 15px; margin-top: 15px">
+        <input type="text" placeholder="search" class="searchbar-input" id="searchbar-input">
+    </div>
+    <div class="welcometitle">
+        <div class="welcome">
+            <p style="display: inline">Welcome <p style="display: inline;color: #ff5500">Ruixin</p></p>
+        </div>
+        <div class="shoppingcart">
+            <ul>
+                <li><a href="frontpage.html" class="oriange">首页</a></li>
+                <li><a href="specificdetailpage.html" class="oriange">详情</a></li>
+                <li><a class="oriange">发布艺术品</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+</header>
+
+<div id="registerdiv" class="pop-up hide">
+    <img src="images/icons/cancel.png" class="pop-box-cancel" onclick="registerHide()">
+    <p class="pop-up-logo">ArtStore</p>
+    <p style="text-align: center;margin-bottom:20px">Register for ArtStore</p>
+    <form>
+        <table>
+            <tr><td><p class="reg-boxs">昵称： </p></td><td><input type="text" placeholder="昵称" class="gray" id="in1"></td><td class="remainder2 hide" id="rm1">*至少六位</td><td class="remainder2 hide" id="rm2">*需要数字和字母</td><td class="remainder2 hide" id="rm3">*不可为空</td><td class="remainder2 hide" id="rm13">*用户名已存在</td></tr>
+            <tr><td><p class="reg-boxs">密码： </p></td><td><input type="password" placeholder="密码" class="gray"id="in2" onclick="c1()"></td><td class="remainder2 hide" id="rm4">*至少六位</td><td class="remainder2 hide" id="rm5">*不能与昵称相同</td><td class="remainder2 hide" id="rm6">*不可为空</td></tr>
+            <tr><td><p class="reg-boxs">确认密码： </p></td><td><input type="password" placeholder="确认密码" class="gray"id="in3" onclick="c1();c2()"></td><td class="remainder2 hide" id="rm7">*需与密码相同</td></tr>
+            <tr><td><p class="reg-boxs">邮箱： </p></td><td><input type="text" placeholder="邮箱" class="gray"id="in4" onclick="c3();c2();c1()"></td><td class="remainder2 hide" id="rm8">*不得为空</td><td class="remainder2 hide" id="rm9">*格式不正确</td></tr>
+            <tr><td><p class="reg-boxs">电话： </p></td><td><input type="text" placeholder="电话" class="gray"id="in5" onclick="c1();c2();c3();c4()"></td><td class="remainder2 hide" id="rm10">*不得为空</td><td class="remainder2 hide" id="rm11">*格式不正确</td></tr>
+            <tr><td><p class="reg-boxs">地址： </p></td><td><input type="text" placeholder="地址" class="gray"id="in6" onclick="c5();c4();c3();c2();c1()"></td><td class="remainder2" id="rm12">*</td></tr>
+            <tr><td><input type="reset" id="resetbut" style="display: none"></td></tr>
+        </table>
+    </form>
+    <p class="reg-yes" onclick="registeSpeP()">REGISTER</p>
+    <p class="reg-already" onclick="registerHide();loginShow()">ALREADY REGISTERED?SIGN IN</p>
+</div>
+<div id="logindiv" class="pop-up-2 hide">
+    <img src="images/icons/cancel.png" class="pop-box-cancel" onclick="loginHide()">
+    <p class="pop-up-logo">ArtStore</p>
+    <p style="text-align: center;margin-bottom:20px">Please enter your username and password.</p>
+    <form>
+        <table>
+            <tr><p style="text-align: center"><input type="text" placeholder="昵称" class="gray" id="login-username-input"></p></tr>
+            <tr><p style="text-align: center"><input type="password" placeholder="密码" class="gray" id="login-password-input"></p></tr>
+            <tr><p><input type="text" placeholder="验证码" class="gray" id="login-ic-input"><input type = "button" id="code" onclick="createCode()" value="点击获取">  </tr>
+            <tr><p class="remainder" id="r0"></p><p class="remainder hide" id="r1">*密码错误/*用户不存在</p><p class="remainder hide" id="r3">*用户为空</p><p class="remainder hide" id="r4">*密码为空</p><p class="remainder hide" id="r5">*验证码错误</p></tr>
+            <tr><input type="reset" style="display: none" id="loginreset"> </tr>
+        </table>
+        <p class="reg-yes" onclick="loginAffirmSpeP()">LOG IN</p>
+        <p class="reg-already" onclick="loginHide() ,registerShow()">CREAT ACCOUNT</p>
+    </form>
+</div>
+<div class="selectHolder">
+    <select class="select">
+        <option value="sPrice">价格</option>
+        <option value="sHeat">热度</option>
+        <option value="sTitle">标题</option>
+    </select>
+</div>
+<div class="allArtworksHolder">
+    <table class="artworksArea" id="artworksArea">
+        <tr>
+            <td>
+                <div class="artwork-img-wrapper">
+                    <img src="images/works/square-medium/001100.jpg">
+                </div>
+                <div class="details">
+                    <a href="specificdetailpage.html">
+                        <ul>
+                            <li class="ng-binding">Bottle and Fishes</li>
+                            <li class="ng-binding">Georges Braque</li>
+                            <li class="ng-binding">Bottle and Fishes is an excellent example of Braque's foray into Analytic Cubism.</li>
+                        </ul>
+                    </a>
+                </div>
+            </td>
+            <td>
+                <div class="artwork-img-wrapper">
+                    <img src="images/works/square-medium/001130.jpg">
+                </div>
+                <div class="details">
+                    <a href="specificdetailpage.html">
+                        <ul>
+                            <li class="ng-binding">Self Portrait With Palette</li>
+                            <li class="ng-binding">Pablo Picasso</li>
+                            <li class="ng-binding">The tough, spare Self-Portrait with a Palette which Picasso painted in Paris in the autumn of 1906 makes a fitting partner to his Portrait of Gertrude Stein and uses allusion in a similar way.</li>
+                        </ul>
+                    </a>
+                </div>
+            </td>
+            <td>
+                <div class="artwork-img-wrapper">
+                    <img src="images/works/square-medium/001100.jpg">
+                </div>
+                <div class="details">
+                    <a href="specificdetailpage.html">
+                        <ul>
+                            <li class="ng-binding">Bottle and Fishes</li>
+                            <li class="ng-binding">Georges Braque</li>
+                            <li class="ng-binding">Bottle and Fishes is an excellent example of Braque's foray into Analytic Cubism.</li>
+                        </ul>
+                    </a>
+                </div>
+            </td>
+            <td>
+                <div class="artwork-img-wrapper">
+                    <img src="images/works/square-medium/001100.jpg">
+                </div>
+                <div class="details">
+                    <a href="specificdetailpage.html">
+                        <ul>
+                            <li class="ng-binding">Bottle and Fishes</li>
+                            <li class="ng-binding">Georges Braque</li>
+                            <li class="ng-binding">Bottle and Fishes is an excellent example of Braque's foray into Analytic Cubism.</li>
+                        </ul>
+                    </a>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="artwork-img-wrapper">
+                    <img src="images/works/square-medium/001100.jpg">
+                </div>
+                <div class="details">
+                    <a href="specificdetailpage.html">
+                        <ul>
+                            <li class="ng-binding">Bottle and Fishes</li>
+                            <li class="ng-binding">Georges Braque</li>
+                            <li class="ng-binding">Bottle and Fishes is an excellent example of Braque's foray into Analytic Cubism.</li>
+                        </ul>
+                    </a>
+                </div>
+            </td>
+            <td>
+                <div class="artwork-img-wrapper">
+                    <img src="images/works/square-medium/001130.jpg">
+                </div>
+                <div class="details">
+                    <a href="specificdetailpage.html">
+                        <ul>
+                            <li class="ng-binding">Self Portrait With Palette</li>
+                            <li class="ng-binding">Pablo Picasso</li>
+                            <li class="ng-binding">The tough, spare Self-Portrait with a Palette which Picasso painted in Paris in the autumn of 1906 makes a fitting partner to his Portrait of Gertrude Stein and uses allusion in a similar way.</li>
+                        </ul>
+                    </a>
+                </div>
+            </td>
+            <td>
+                <div class="artwork-img-wrapper">
+                    <img src="images/works/square-medium/001100.jpg">
+                </div>
+                <div class="details">
+                    <a href="specificdetailpage.html">
+                        <ul>
+                            <li class="ng-binding">Bottle and Fishes</li>
+                            <li class="ng-binding">Georges Braque</li>
+                            <li class="ng-binding">Bottle and Fishes is an excellent example of Braque's foray into Analytic Cubism.</li>
+                        </ul>
+                    </a>
+                </div>
+            </td>
+            <td>
+                <div class="artwork-img-wrapper">
+                    <img src="images/works/square-medium/001100.jpg">
+                </div>
+                <div class="details">
+                    <a href="specificdetailpage.html">
+                        <ul>
+                            <li class="ng-binding">Bottle and Fishes</li>
+                            <li class="ng-binding">Georges Braque</li>
+                            <li class="ng-binding">Bottle and Fishes is an excellent example of Braque's foray into Analytic Cubism.</li>
+                        </ul>
+                    </a>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="artwork-img-wrapper">
+                    <img src="images/works/square-medium/001100.jpg">
+                </div>
+                <div class="details">
+                    <a href="specificdetailpage.html">
+                        <ul>
+                            <li class="ng-binding">Bottle and Fishes</li>
+                            <li class="ng-binding">Georges Braque</li>
+                            <li class="ng-binding">Bottle and Fishes is an excellent example of Braque's foray into Analytic Cubism.</li>
+                        </ul>
+                    </a>
+                </div>
+            </td>
+            <td>
+                <div class="artwork-img-wrapper">
+                    <img src="images/works/square-medium/001130.jpg">
+                </div>
+                <div class="details">
+                    <a href="specificdetailpage.html">
+                        <ul>
+                            <li class="ng-binding">Self Portrait With Palette</li>
+                            <li class="ng-binding">Pablo Picasso</li>
+                            <li class="ng-binding">The tough, spare Self-Portrait with a Palette which Picasso painted in Paris in the autumn of 1906 makes a fitting partner to his Portrait of Gertrude Stein and uses allusion in a similar way.</li>
+                        </ul>
+                    </a>
+                </div>
+            </td>
+            <td>
+                <div class="artwork-img-wrapper">
+                    <img src="images/works/square-medium/001100.jpg">
+                </div>
+                <div class="details">
+                    <a href="specificdetailpage.html">
+                        <ul>
+                            <li class="ng-binding">Bottle and Fishes</li>
+                            <li class="ng-binding">Georges Braque</li>
+                            <li class="ng-binding">Bottle and Fishes is an excellent example of Braque's foray into Analytic Cubism.</li>
+                        </ul>
+                    </a>
+                </div>
+            </td>
+            <td>
+                <div class="artwork-img-wrapper">
+                    <img src="images/works/square-medium/001100.jpg">
+                </div>
+                <div class="details">
+                    <a href="specificdetailpage.html">
+                        <ul>
+                            <li class="ng-binding">Bottle and Fishes</li>
+                            <li class="ng-binding">Georges Braque</li>
+                            <li class="ng-binding">Bottle and Fishes is an excellent example of Braque's foray into Analytic Cubism.</li>
+                        </ul>
+                    </a>
+                </div>
+            </td>
+        </tr>
+    </table>
+    <div class="no-s-r hide" id="no-search-result">搜索为空</div>
+</div>
+
+<div class="bottom-dir" id="bottom-dir">
+    <a><</a><a>1</a><a>2</a><a>3</a><a>4</a><a>5</a><a>...</a><a>24</a><a>25</a><a>></a>
+</div>
+
+
+
+
+
+
+
+<script type="text/javascript" src="register.js"></script>
+</body>
+</html>

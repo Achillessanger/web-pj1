@@ -25,6 +25,7 @@ function registerHide() {
     document.getElementById('rm9').classList.add('hide');
     document.getElementById('rm10').classList.add('hide');
     document.getElementById('rm11').classList.add('hide');
+    document.getElementById('rm13').classList.add('hide');
     canRegiste = false;
     document.getElementById('registerdiv').classList.add('hide');
 }
@@ -77,10 +78,12 @@ function loginAffirm() {
 
 function loginAffirmSpeP() {
 
+
     document.getElementById('r1').classList.add('hide');
     // document.getElementById('r2').classList.add('hide')
     document.getElementById('r3').classList.add('hide');
     document.getElementById('r4').classList.add('hide');
+    document.getElementById('r5').classList.add('hide');
 
     if(document.getElementById('login-username-input').value == ""){
         document.getElementById('r3').classList.remove('hide');
@@ -88,6 +91,8 @@ function loginAffirmSpeP() {
         document.getElementById('r4').classList.remove('hide');
     }else if(document.getElementById('login-username-input').value == "123"&document.getElementById('login-password-input').value == "123"){
         document.getElementById('r1').classList.remove('hide');
+    }else if(document.getElementById('login-ic-input').value != code0 || document.getElementById('login-ic-input').value == ""){
+        document.getElementById('r5').classList.remove('hide');
     }else {
 
         // document.getElementById('nav-notyet').classList.add('hide');
@@ -99,6 +104,7 @@ function loginAffirmSpeP() {
         window.location.href="specificdetailpage-registered.html";
         alert("登陆成功");
     }
+
 
 }
 
@@ -216,14 +222,23 @@ function c5() {
         canRegiste = true;
     }
 }
+function c13() {
+    if(document.getElementById('in1').value == "123"){
+        canRegiste=false;
+        document.getElementById('rm1').classList.add('hide');
+        document.getElementById('rm2').classList.add('hide');
+        document.getElementById('rm3').classList.add('hide');
+        document.getElementById('rm13').classList.remove('hide');
+    }
+}
 function registeFrontP() {
     c1();
     c2();
     c3();
     c4();
     c5();
+    c13()
     if(canRegiste){
-
         window.location.href="frontpage-registered.html";
         alert("注册成功");
     }
@@ -234,6 +249,7 @@ function registeSpeP() {
     c3();
     c4();
     c5();
+    c13();
     if(canRegiste){
 
         window.location.href="specificdetailpage-registered.html";
@@ -261,3 +277,89 @@ function createCode(){
     codeV.value = code;
     code0 = code;
 }
+
+
+var funStatus = true;//无需手动设置，这是标记是否可以再次进行展开/收缩操作
+var unfoldValue=10;//执行展开操作的像素数，越小越慢.并且不会因为数字过大超过设定的max高度而影响显示效果
+var shrinkvalue=10;//执行收缩操作的像素数，越小越慢
+var time=10;//多长时间操作一次，越小越快
+var min=0;//收缩到多少像素的高度停止
+var max = 50;//展开到多少像素高度停止
+
+function HideAd(o){
+
+    var timer = setInterval(function(){
+        if(o.offsetHeight >= min + shrinkvalue ){
+            o.style.height = o.offsetHeight - shrinkvalue + 'px';
+            document.getElementById('btn').innerHTML="展开";
+            funStatus = false;
+        }
+        else{
+            o.style.height = min+'px';
+            funStatus = true;
+            clearInterval(timer);
+        }
+    }, time);
+}
+function ShowAd(o){
+
+    var timer = setInterval(function(){
+        if(o.offsetHeight + unfoldValue < max){
+            o.style.height = (o.offsetHeight + unfoldValue) + 'px';
+            document.getElementById('btn').innerHTML="收缩";
+            funStatus = false;
+        }
+        else{
+            o.style.height = max+'px';
+            funStatus = true;
+            clearInterval(timer);
+        }
+    },time);
+}
+
+function toogle()
+{
+    if(funStatus)
+    {
+        var o =document.getElementById('searchbar');
+        if(o.offsetHeight >= max )
+            HideAd(o);
+        else
+            ShowAd(o);
+    }
+
+}
+
+// $(function(){
+//     $('#searchimg').click(function(){//给d1绑定一个点击事件;
+//
+//         /*这个判断的意义是,如果d2是隐藏的,那么让它显示出来,并将d1的文本内容替换成收起,
+//         如果是显示的,那么就隐藏它并将d1的文本内容替换为展开;*/
+//         if($('#searchbar').is(':hidden'))
+//         {
+//             $('#searchbar').slideDown('slow');
+//             $(this).text('收起');
+//         }else{
+//             $('#searchbar').slideUp('slow');
+//             $(this).text('展开');
+//         }
+//
+//         /*这是一个很简单的事件处理,如果还需要跟上图片的变换,就在判断的对应位置写入图片或者背景变换的代码,*/
+//     });
+// });
+
+
+document.getElementById('searchbar-input').onkeydown=function(event){
+    var e = event || window.event || arguments.callee.caller.arguments[0];
+    if(e && e.keyCode==13){ // enter 键
+        if(document.getElementById('searchbar-input').value == "123"){
+            document.getElementById('no-search-result').classList.remove('hide');
+            document.getElementById('artworksArea').classList.add('hide');
+            document.getElementById('bottom-dir').classList.add('hide');
+        }else {
+            document.getElementById('no-search-result').classList.add('hide');
+            document.getElementById('artworksArea').classList.remove('hide');
+            document.getElementById('bottom-dir').classList.remove('hide');
+        }
+    }
+};

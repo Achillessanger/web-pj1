@@ -1,0 +1,168 @@
+*{
+    box-sizing: border-box;
+}
+.welcome{
+    float: right;
+    background: white;
+    padding: 20px 0;
+    margin-right: 20px;
+    overflow: auto;
+    padding-bottom: 0px;
+
+}
+.welcometitle{
+    overflow: auto;
+    width: 1164px;
+    background: white;
+    border-bottom: 1px solid #e5e5e5;
+}
+.searchbar{
+    overflow: auto;
+    width: 1164px;
+    background: white;
+    border-bottom: 1px solid #e5e5e5;
+    height: 0px;
+    z-index: 2000;
+}
+.searchbar-input{
+    width: 95%;
+    border: none;
+    font-family: Arial,sans-serif;
+    font-size: 16px;
+    text-align: left;
+    color: #1e1e1e;
+    box-shadow: none;
+    height: 40px;
+    line-height: 52px;
+    padding-left: 15px;
+    outline: none;
+}
+.shoppingcart{
+    float: left;
+}
+.shoppingcart>ul{
+    padding: 20px 0;
+    overflow: auto;
+}
+.shoppingcart>ul>li{
+    margin-right: 20px;
+    color: #ff5500;
+    cursor: pointer;
+}
+.shoppingcart>ul>li{
+    color: #fb9e3a;
+}
+.oriange{
+    color: #ff5500;
+}
+.oriange:hover{
+    color: #fb9e3a;
+}
+
+.allArtworksHolder{
+    padding: 42px 0 0;
+    width: 1164px;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 20px;
+    overflow: auto;
+}
+.selectHolder{
+    /*height: 20px;*/
+    /*width: 42px;*/
+    width: 1164px;
+    margin: 0  auto;
+    margin-top: 190px;
+    overflow: auto;
+
+}
+.select{
+    float: right;
+
+    width: 89px;
+    height: 30px;
+    padding: 4px 5px 4px 12px;
+
+    /*background-color: white;*/
+    outline: none;
+    border: 1px solid #333;
+}
+.select span{
+    color: black;
+}
+.artworksArea{
+    position: relative;
+    /*height: 4009px;*/
+    width: 1162px;
+    opacity: 1;
+    margin: 0 auto 40px;
+    display: table;
+}
+.artworkBox{
+    min-width: 223px;
+    margin: 0 0 42px;
+    display: table-cell;
+
+}
+.artwork-img-wrapper img{
+    vertical-align: middle;
+    border: 0;
+}
+.artwork-img-wrapper{
+    position: relative;
+    /*box-shadow: 1px 3px 10px rgba(0,0,0,.3);*/
+    /*border-radius: .1px;*/
+}
+.details{
+    text-align: center;
+    width:100%;
+    height: 100%;
+    padding: 20px 20px 0;
+    cursor: pointer;
+}
+.details a{
+    color: black;
+    text-decoration: none;
+}
+.details ul{
+    list-style:none;
+    margin: 0;
+    padding: 0;
+}
+.details li{
+    display: list-item;
+    font-size: 13px;
+    margin-bottom: 5px;
+}
+.artworkBox2{
+    display: inline;
+
+}
+.artworksArea td{
+    width: 223px!important;
+    vertical-align: top;
+}
+.artworksArea tr{
+
+    margin-bottom: 20px;
+}
+.bottom-dir{
+    width: 1164px;
+    margin: 0 auto;
+    margin-top: 50px;
+    text-align: center;
+    margin-bottom: 60px;
+}
+.bottom-dir a{
+    margin-right: 20px;
+    color: #333333;
+    cursor: pointer;
+}
+.bottom-dir a:hover{
+    color: #898989;
+}
+.no-s-r{
+    margin-top: 100px;
+    text-align: center;
+    font-size: 30px;
+}
