@@ -388,3 +388,23 @@ document.getElementById('searchbar-input').onkeydown=function(event){
         }
     }
 };
+//
+// document.getElementById('searchbar-input2').onkeydown=function(event){
+//
+//     var e = event || window.event || arguments.callee.caller.arguments[0];
+//     if(e && e.keyCode==13){ // enter 键
+//         window.location='searchpagr.html';
+//         if(document.getElementById('searchbar-input2').value == "123"){
+//             document.getElementById('no-search-result').classList.remove('hide');
+//             document.getElementById('artworksArea').classList.add('hide');
+//             document.getElementById('bottom-dir').classList.add('hide');
+//             document.getElementById('searchcontent').classList.add('hide');
+//         }else {
+//             document.getElementById('searchcontent').classList.remove('hide');
+//             document.getElementById('searchcontent').innerHTML=document.getElementById('searchbar-input2').value;
+//             document.getElementById('no-search-result').classList.add('hide');
+//             document.getElementById('artworksArea').classList.remove('hide');
+//             document.getElementById('bottom-dir').classList.remove('hide');
+//         }
+//     }
+// };

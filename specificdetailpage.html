@@ -27,10 +27,15 @@
                         <!--<img src="images/icons/more.png"><a class="bianse" href="specificdetailpage.html">详情</a>-->
                     <!--</li>-->
                     <li class="hidden-xs">
-                        <img src="images/icons/go_search.png" class="gosearch">
+                        <img src="images/icons/go_search.png" class="gosearch" onclick="toogle()">
                     </li>
                 </ul>
             </nav>
+
+            <div class="searchbar" id = "searchbar">
+                <img src="images/icons/go_search.png" class="gosearch" style="width: 15px;height: 15px; margin-top: 15px">
+                <input type="text" placeholder="search" class="searchbar-input2" id="searchbar-input2" maxlength="50">
+            </div>
 
             <div class="paintertitle">
                 <div class="paintertitlesmaller">
@@ -110,11 +115,11 @@
                 </div>
                 <div class="artistlink">
                     <p style="color: #1e1e1e">James Abbott McNeill Whistler</p>
-                    <a class="AW" href="detailspage.html">Looking for his/her other paintings</a>
+                    <a class="AW" href="searchpage.html">Looking for his/her other paintings</a>
                 </div>
             </div>
                 <!--<button class="SMG"onclick="window.location.href='detailspage.html'">See Other Goods...</button>-->
-                <p><a class="SMG" href="detailspage.html" >See More Goods</a></p>
+                <p><a class="SMG" href="searchpage.html" >See More Goods</a></p>
         </div>
     </div>
 
@@ -122,6 +127,7 @@
     <script type="text/javascript" src="register.js"></script>
     <script type="text/javascript" src="Buttons.js"></script>
     <script type="text/javascript" src="enlarge.js"></script>
+    <script type="text/javascript" src="linkToSearchPage.js"></script>
 
 
     <footer>
