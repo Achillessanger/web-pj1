@@ -10,24 +10,25 @@
 <div class="titlebar">
     <nav class="navbar">
         <ul class="nav-float-left dont-change-line">
-            <li class="ASlogo" ><a href="frontpage.html" style="color: #1e1e1e">Art Store</a></li>
-            <li class="hidden-xs"><a class="bianse" onclick="loginShow()">登陆</a> or <a class="bianse" onclick="registerShow()">注册</a></li>
+            <li class="ASlogo" ><a href="frontpage-registered.html" style="color: #1e1e1e">Art Store</a></li>
+            <!--<li class="hidden-xs"><a class="bianse" onclick="loginShow()">登陆</a> or <a class="bianse" onclick="registerShow()">注册</a></li>-->
         </ul>
         <ul class="nav-float-right dont-change-line">
             <li class="hidden-xs">
-                <img src="images/icons/user.png"><a onclick="loginShow()">未登录</a>
+                <img src="images/icons/user.png"><a href="personalinforpage.html">已登录</a>
             </li>
-            <!--<li class="hidden-xs"><img src="images/icons/cart.png"><a class="bianse" href="shoppingcartpage.html">购物车</a>-->
-            <!--</li>-->
-            <!--<li class="hidden-xs">-->
-            <!--<img src="images/icons/logout.png"><a class="bianse" href="logout.gtml">登出</a>-->
-            <!--</li>-->
-            <!--<li class="hidden-xs">-->
-                <!--<img src="images/icons/more.png"><a class="bianse" href="specificdetailpage.html">详情</a>-->
-            <!--</li>-->
+            <li class="hidden-xs"><img src="images/icons/cart.png"><a class="bianse" href="shoppingcartpage.html">购物车</a>
+            </li>
+            <li class="hidden-xs">
+                <img src="images/icons/more.png"><a class="bianse" href="specificdetailpage-registered.html">详情</a>
+            </li>
+            <li class="hidden-xs">
+                <img src="images/icons/logout.png"><a class="bianse" href="searchpage.html">登出</a>
+            </li>
             <li class="hidden-xs">
                 <img src="images/icons/go_search.png" class="gosearch" id="searchimg" onclick="toogle()">
             </li>
+        </ul>
         </ul>
     </nav>
     <div class="searchbar" id = "searchbar">
@@ -35,14 +36,14 @@
         <input type="text" placeholder="search" class="searchbar-input" id="searchbar-input" maxlength="50">
     </div>
     <div class="welcometitle">
-        <div class="welcome hide">
+        <div class="welcome">
             <p style="display: inline">Welcome <p style="display: inline;color: #ff5500">Ruixin</p></p>
         </div>
         <div class="shoppingcart">
             <ul>
                 <li><a href="frontpage.html" class="oriange">首页</a></li>
                 <li><a href="specificdetailpage.html" class="oriange">详情</a></li>
-                <li><a class="oriange" onclick="loginShow()">发布艺术品</a></li>
+                <li><a class="oriange">发布艺术品</a></li>
             </ul>
         </div>
     </div>
@@ -64,7 +65,7 @@
             <tr><td><input type="reset" id="resetbut" style="display: none"></td></tr>
         </table>
     </form>
-    <p class="reg-yes" onclick="registeSearchP()">REGISTER</p>
+    <p class="reg-yes" onclick="registeSpeP()">REGISTER</p>
     <p class="reg-already" onclick="registerHide();loginShow()">ALREADY REGISTERED?SIGN IN</p>
 </div>
 <div id="logindiv" class="pop-up-2 hide">
@@ -79,7 +80,7 @@
             <tr><p class="remainder" id="r0"></p><p class="remainder hide" id="r1">*密码错误/*用户不存在</p><p class="remainder hide" id="r3">*用户为空</p><p class="remainder hide" id="r4">*密码为空</p><p class="remainder hide" id="r5">*验证码错误</p></tr>
             <tr><input type="reset" style="display: none" id="loginreset"> </tr>
         </table>
-        <p class="reg-yes" onclick="loginAffirmSearchP();">LOG IN</p>
+        <p class="reg-yes" onclick="loginAffirmSpeP()">LOG IN</p>
         <p class="reg-already" onclick="loginHide() ,registerShow()">CREAT ACCOUNT</p>
     </form>
 </div>

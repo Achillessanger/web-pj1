@@ -107,6 +107,34 @@ function loginAffirmSpeP() {
 
 
 }
+function loginAffirmSearchP() {
+    document.getElementById('r1').classList.add('hide');
+    // document.getElementById('r2').classList.add('hide')
+    document.getElementById('r3').classList.add('hide');
+    document.getElementById('r4').classList.add('hide');
+    document.getElementById('r5').classList.add('hide');
+
+    if(document.getElementById('login-username-input').value == ""){
+        document.getElementById('r3').classList.remove('hide');
+    }else if(document.getElementById('login-password-input').value == ""){
+        document.getElementById('r4').classList.remove('hide');
+    }else if(document.getElementById('login-username-input').value == "123"&document.getElementById('login-password-input').value == "123"){
+        document.getElementById('r1').classList.remove('hide');
+    }else if(document.getElementById('login-ic-input').value != code0 || document.getElementById('login-ic-input').value == ""){
+        document.getElementById('r5').classList.remove('hide');
+    }else {
+        // document.getElementById('nav-notyet').classList.add('hide');
+        // document.getElementById('nav-already').classList.remove('hide');
+        userName = document.getElementById('login-username-input').value;
+        userPassword = document.getElementById('login-password-input').value;
+        loginHide();
+        ifLoged = true;
+        window.location.href="searchpage-registered.html";
+        alert("登陆成功");
+    }
+
+
+}
 
 // function refreshNavbar() {
 //     if(ifLoged){
@@ -256,6 +284,18 @@ function registeSpeP() {
         alert("注册成功");
     }
 }
+function registeSearchP() {
+    c1();
+    c2();
+    c3();
+    c4();
+    c5();
+    c13();
+    if(canRegiste){
+        window.location.href="searchpage-registered.html";
+        alert("注册成功");
+    }
+}
 
 var code;
 function createCode(){
@@ -330,24 +370,6 @@ function toogle()
 
 }
 
-// $(function(){
-//     $('#searchimg').click(function(){//给d1绑定一个点击事件;
-//
-//         /*这个判断的意义是,如果d2是隐藏的,那么让它显示出来,并将d1的文本内容替换成收起,
-//         如果是显示的,那么就隐藏它并将d1的文本内容替换为展开;*/
-//         if($('#searchbar').is(':hidden'))
-//         {
-//             $('#searchbar').slideDown('slow');
-//             $(this).text('收起');
-//         }else{
-//             $('#searchbar').slideUp('slow');
-//             $(this).text('展开');
-//         }
-//
-//         /*这是一个很简单的事件处理,如果还需要跟上图片的变换,就在判断的对应位置写入图片或者背景变换的代码,*/
-//     });
-// });
-
 
 document.getElementById('searchbar-input').onkeydown=function(event){
     var e = event || window.event || arguments.callee.caller.arguments[0];
@@ -356,7 +378,10 @@ document.getElementById('searchbar-input').onkeydown=function(event){
             document.getElementById('no-search-result').classList.remove('hide');
             document.getElementById('artworksArea').classList.add('hide');
             document.getElementById('bottom-dir').classList.add('hide');
+            document.getElementById('searchcontent').classList.add('hide');
         }else {
+            document.getElementById('searchcontent').classList.remove('hide');
+            document.getElementById('searchcontent').innerHTML=document.getElementById('searchbar-input').value;
             document.getElementById('no-search-result').classList.add('hide');
             document.getElementById('artworksArea').classList.remove('hide');
             document.getElementById('bottom-dir').classList.remove('hide');
