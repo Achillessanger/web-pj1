@@ -30,15 +30,15 @@
                         <img src="images/icons/logout.png"><a class="bianse" onclick="logout()">登出</a>
                     </li>
                     <li class="hidden-xs">
-                        <img src="images/icons/go_search.png" class="gosearch">
+                        <img src="images/icons/go_search.png" class="gosearch" onclick="toogle()">
                     </li>
                 </ul>
             </div>
         </nav>
-
-
-
-
+        <div class="searchbar" id = "searchbar">
+            <img src="images/icons/go_search.png" class="gosearch" style="width: 15px;height: 15px; margin-top: 15px">
+            <input type="text" placeholder="search" class="searchbar-input2" id="searchbar-input3" maxlength="50">
+        </div>
         <!--<hr class="line1">-->
     </div>
 </header>
@@ -118,6 +118,7 @@
 
 <script type="text/javascript" src="register.js"></script>
 <script type="text/javascript" src="gallery-change.js"></script>
+<script type="text/javascript" src="linkToSearchPagereg.js"></script>
 
 
 </body>
