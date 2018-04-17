@@ -62,3 +62,18 @@ function addTDs2() {
     cell4.className = "td4";
     cell5.className = "td5";
 }
+
+function addMoney() {
+    var previousMon = document.getElementById('balance').innerText;
+    var mon = document.getElementById('chargeinput').value;
+    document.getElementById('balance').innerText = (parseInt(previousMon)+parseInt(mon));
+    // alert(document.getElementById('balance').innerText)
+    hideCharge();
+}
+function showCharge() {
+    document.getElementById('charge-pop').classList.remove('hide');
+}
+
+function hideCharge() {
+    document.getElementById('charge-pop').classList.add('hide');
+}

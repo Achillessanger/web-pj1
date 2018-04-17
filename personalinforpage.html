@@ -67,16 +67,27 @@
                 <td></td>
             </tr>
             <tr>
-                <td>余额：</td>
-                <td>999,000,000 USD</td>
+                <td >余额：</td>
+                <td id="balance">2</td>
             </tr>
             <tr class="rechargetr">
                 <td colspan="2">
-                    <button class="rechargebut">充值信仰</button>
+                    <button class="rechargebut" onclick="showCharge()">充值信仰</button>
                 </td>
             </tr>
         </table>
     </aside>
+
+    <div id="charge-pop" class="charge-pop hide">
+        <img src="images/icons/cancel.png"  onclick="hideCharge()">
+        <form>
+            <p>充值金额：</p>
+            <input type="number" placeholder="请输入充值金额" min="1" id="chargeinput"><br>
+            <button type="button" id="chargebtn" onclick="addMoney()">确认充值</button>
+        </form>
+
+    </div>
+
     <div class="right-part">
         <div class="right-3-vbox">
             <div class="uploaded">
@@ -125,6 +136,7 @@
     </div>
 </div>
 <script type="text/javascript" src="linkToSearchPagereg.js"></script>
+<script type="text/javascript" src="Buttons.js"></script>
 <!--<footer>-->
     <!--<div>-->
         <!--<p class="copyright">&copyArtStore.Produced and maintained by Achillessanger at 2018.4.1. All Rights Reserved</p>-->
