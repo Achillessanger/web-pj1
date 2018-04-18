@@ -102,8 +102,58 @@
     </form>
 </div>
 
-    <div class="galleryWraper hidden-xs">
-        <img class="gallery" src="images/frontpage/gallery3.jpg" id="gal" onmouseover="stopChange()" onmouseout="startChange()">
+    <div class="galleryWraper hidden-xs" id="galleryDiv">
+
+        <div class="banner" id="b04">
+            <ul>
+                <li class="slider-item"><a href="specificdetailpage.html"><img src="images/frontpage/gallery1.jpg" alt="" width="1164" height="480" ></a></li>
+                <li class="slider-item"><a href="specificdetailpage.html"><img src="images/frontpage/gallery2.jpg" alt="" width="1164" height="480" ></a></li>
+                <li class="slider-item"><a href="specificdetailpage.html"><img src="images/frontpage/gallery3.jpg" alt="" width="1164" height="480" ></a></li>
+                <li class="slider-item"><a href="specificdetailpage.html"><img src="images/frontpage/gallery4.jpg" alt="" width="1164" height="480" ></a></li>
+                <li class="slider-item"><a href="specificdetailpage.html"><img src="images/frontpage/gallery5.jpg" alt="" width="1164" height="480" ></a></li>
+            </ul>
+            <div class="progress"></div>
+            <a href="javascript:void(0);" class="unslider-arrow04 prev"><img class="arrow" id="al" src="images/frontpage/arrowl.png" alt="prev" width="20" height="35"></a>
+            <a href="javascript:void(0);" class="unslider-arrow04 next"><img class="arrow" id="ar" src="images/frontpage/arrowr.png" alt="next" width="20" height="37"></a>
+        </div>
+        <script src="jquery-1.11.1.min.js"></script>
+        <script src="unslider.min.js"></script>
+        <script>
+            $(document).ready(function(e) {
+                var progress = $(".progress"),li_width = $("#b04 li").length;
+                var unslider04 = $('#b04').unslider({
+                        dots: true,
+                        complete:function(index){//自己添加的，官方没有
+                            progress.animate({"width":(100/li_width)*(index+1)+"%"});
+                        }
+                    }),
+
+                    data04 = unslider04.data('unslider');
+                $('.unslider-arrow04').click(function() {
+                    var fn = this.className.split(' ')[1];
+                    data04[fn]();
+                });
+            });
+        </script>
+
+
+
+
+        <!--<div id="b04" class="banner">-->
+            <!--<ul>-->
+                <!--<li class="slider-item"><a href="specificdetailpage.html"><img src="images/frontpage/gallery3.jpg" alt=""></a></li>-->
+                <!--<li class="slider-item"><a href="specificdetailpage.html"><img src="images/frontpage/gallery1.jpg" alt=""></a></li>-->
+                <!--<li class="slider-item"><a href="specificdetailpage.html"><img src="images/frontpage/gallery2.jpg" alt=""></a></li>-->
+                <!--<li class="slider-item"><a href="specificdetailpage.html"><img src="images/frontpage/gallery3.jpg" alt=""></a></li>-->
+                <!--<li class="slider-item"><a href="specificdetailpage.html"><img src="images/frontpage/gallery1.jpg" alt=""></a></li>-->
+            <!--</ul>-->
+            <!--<div class="progress"></div>-->
+            <!--<a href="javascript:void(0);" class="unslider-arrow04 prev"><img class="arrow" id="al" src="images/arrowl.png" alt="prev" width="20" height="35"></a>-->
+            <!--<a href="javascript:void(0);" class="unslider-arrow04 next"><img class="arrow" id="ar" src="images/arrowr.png" alt="next" width="20" height="37"></a>-->
+           <!---->
+        <!--</div>-->
+
+        <!--<img class="gallery" src="images/frontpage/gallery3.jpg" id="gal" onmouseover="stopChange()" onmouseout="startChange()">-->
     </div>
     <hr class="line2">
     <div class="hottest-3-display">
@@ -148,7 +198,8 @@
 
 
 <script type="text/javascript" src="register.js"></script>
-<script type="text/javascript" src="gallery-change.js"></script>
+<!--<script type="text/javascript" src="gallery-change.js"></script>-->
+
 
 
 </body>

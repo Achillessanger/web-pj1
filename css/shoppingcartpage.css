@@ -254,3 +254,25 @@ table tr td{
 .bottom-dir a:hover{
     color: #898989;
 }
+
+.searchbar{
+    overflow: auto;
+    width: 1164px;
+    background: white;
+    border-bottom: 1px solid #e5e5e5;
+    height: 0px;
+    z-index: 2000;
+}
+.searchbar-input2{
+    width: 95%;
+    border: none;
+    font-family: Arial,sans-serif;
+    font-size: 16px;
+    text-align: left;
+    color: #1e1e1e;
+    box-shadow: none;
+    height: 40px;
+    line-height: 52px;
+    padding-left: 15px;
+    outline: none;
+}
