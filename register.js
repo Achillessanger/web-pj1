@@ -2,8 +2,13 @@ ifLoged = false;
 ifAlreadyAffirmed = false;
 userName = "";
 userPassword = "";
-canRegiste = false;
+canRegiste1 = false;
+canRegiste2 = false;
+canRegiste3 = false;
+canRegiste4 = false;
+canRegiste5 = false;
 code0 = "";
+failRegis = false;
 
 function registerShow(){
     loginHide();
@@ -159,23 +164,31 @@ function c1() {
         document.getElementById('rm1').classList.add('hide');
         document.getElementById('rm2').classList.add('hide');
         document.getElementById('rm3').classList.remove('hide');
-        canRegiste = false;
+        canRegiste1 = false;
     }else if(document.getElementById('in1').value.length < 6 && document.getElementById('in1').value.length > 0){
         document.getElementById('rm3').classList.add('hide');
         document.getElementById('rm2').classList.add('hide');
         document.getElementById('rm1').classList.remove('hide');
-        canRegiste = false;
+        canRegiste1 = false;
     }else if(!(k1.test(stringin1)&& k2.test(stringin1))){
         document.getElementById('rm3').classList.add('hide');
         document.getElementById('rm1').classList.add('hide');
         document.getElementById('rm2').classList.remove('hide');
-        canRegiste = false;
+        canRegiste1 = false;
     }else {
         document.getElementById('rm1').classList.add('hide');
         document.getElementById('rm2').classList.add('hide');
         document.getElementById('rm3').classList.add('hide');
-        canRegiste = true;
+        canRegiste1 = true;
     }
+
+
+    if(document.getElementById('in1').value == "12345q"){
+        canRegiste1 = false;
+        failRegis = true;
+    }
+
+
 }
 function c2() {
     stringin2 = document.getElementById('in2').value;
@@ -183,22 +196,22 @@ function c2() {
         document.getElementById('rm4').classList.add('hide');
         document.getElementById('rm5').classList.add('hide');
         document.getElementById('rm6').classList.remove('hide');
-        canRegiste = false;
+        canRegiste2 = false;
     }else if(document.getElementById('in2').value.length < 6 && document.getElementById('in2').value.length > 0){
         document.getElementById('rm6').classList.add('hide');
         document.getElementById('rm5').classList.add('hide');
         document.getElementById('rm4').classList.remove('hide');
-        canRegiste = false;
+        canRegiste2 = false;
     }else if(stringin1 == stringin2){
         document.getElementById('rm4').classList.add('hide');
         document.getElementById('rm6').classList.add('hide');
         document.getElementById('rm5').classList.remove('hide');
-        canRegiste = false;
+        canRegiste2 = false;
     }else {
         document.getElementById('rm4').classList.add('hide');
         document.getElementById('rm5').classList.add('hide');
         document.getElementById('rm6').classList.add('hide');
-        canRegiste = true;
+        canRegiste2 = true;
     }
 
 }
@@ -206,13 +219,13 @@ function c3() {
     stringin3 = document.getElementById('in3').value;
     if(document.getElementById('in1').value==""&&document.getElementById('in2').value == ""){
         document.getElementById('rm7').classList.add('hide');
-        canRegiste = false;
+        canRegiste3 = false;
     }else if(!(stringin3 == stringin2)){
         document.getElementById('rm7').classList.remove('hide');
-        canRegiste = false;
+        canRegiste3 = false;
     }else {
         document.getElementById('rm7').classList.add('hide');
-        canRegiste = true;
+        canRegiste3 = true;
     }
 }
 function c4() {
@@ -221,15 +234,15 @@ function c4() {
     if(stringin4 == ""){
         document.getElementById('rm9').classList.add('hide');
         document.getElementById('rm8').classList.remove('hide');
-        canRegiste = false;
+        canRegiste4 = false;
     }else if(!k3.test(stringin4)){
         document.getElementById('rm8').classList.add('hide');
         document.getElementById('rm9').classList.remove('hide');
-        canRegiste = false;
+        canRegiste4 = false;
     }else {
         document.getElementById('rm8').classList.add('hide');
         document.getElementById('rm9').classList.add('hide');
-        canRegiste = true;
+        canRegiste4 = true;
     }
 }
 function c5() {
@@ -239,20 +252,20 @@ function c5() {
     if(stringin5 == ""){
         document.getElementById('rm11').classList.add('hide');
         document.getElementById('rm10').classList.remove('hide');
-        canRegiste = false;
+        canRegiste5 = false;
     }else if(!(k4.test(stringin5)&& stringin5.length == 11)){
         document.getElementById('rm10').classList.add('hide');
         document.getElementById('rm11').classList.remove('hide');
-        canRegiste = false;
+        canRegiste5 = false;
     }else {
         document.getElementById('rm10').classList.add('hide');
         document.getElementById('rm11').classList.add('hide');
-        canRegiste = true;
+        canRegiste5 = true;
     }
 }
 function c13() {
     if(document.getElementById('in1').value == "123"){
-        canRegiste=false;
+        canRegiste1=false;
         document.getElementById('rm1').classList.add('hide');
         document.getElementById('rm2').classList.add('hide');
         document.getElementById('rm3').classList.add('hide');
@@ -266,9 +279,13 @@ function registeFrontP() {
     c4();
     c5();
     c13()
-    if(canRegiste){
+    if(canRegiste1&canRegiste2&canRegiste3&canRegiste&canRegiste5){
         window.location.href="frontpage-registered.html";
         alert("注册成功");
+    }
+    if(failRegis){
+        window.location.href="frontpage.html";
+        alert("注册失败 用户名已存在");
     }
 }
 function registeSpeP() {
@@ -278,10 +295,14 @@ function registeSpeP() {
     c4();
     c5();
     c13();
-    if(canRegiste){
+    if(canRegiste1&canRegiste2&canRegiste3&canRegiste&canRegiste5){
 
         window.location.href="specificdetailpage-registered.html";
         alert("注册成功");
+    }
+    if(failRegis){
+        window.location.href="specificdetailpage.html";
+        alert("注册失败 用户名已存在");
     }
 }
 function registeSearchP() {
@@ -291,9 +312,13 @@ function registeSearchP() {
     c4();
     c5();
     c13();
-    if(canRegiste){
+    if(canRegiste1&canRegiste2&canRegiste3&canRegiste&canRegiste5){
         window.location.href="searchpage-registered.html";
         alert("注册成功");
+    }
+    if(failRegis){
+        window.location.href="searchpage.html";
+        alert("注册失败 用户名已存在");
     }
 }
 

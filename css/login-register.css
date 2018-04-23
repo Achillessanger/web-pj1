@@ -229,3 +229,7 @@ footer{
     text-align: center;
     color: #bcbec0;
 }
+
+#login-ic-input button{
+    cursor: pointer;
+}

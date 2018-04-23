@@ -1,6 +1,6 @@
 function addToShoppingCart() {
     showAddtoSC();
-   setTimeout(hideAddtoSC,500);
+    setTimeout(hideAddtoSC,500);
 }
 function showAddtoSC() {
     document.getElementById('addtoSC').classList.remove('hide');
@@ -8,6 +8,19 @@ function showAddtoSC() {
 function hideAddtoSC() {
     document.getElementById('addtoSC').classList.add('hide');
 }
+
+function tip() {
+    showTip();
+    setTimeout(hideTip,500);
+}
+function showTip() {
+    document.getElementById('tip').classList.remove('hide');
+}
+function hideTip() {
+    document.getElementById('tip').classList.add('hide');
+}
+
+
 
 function getTDs(obj) {
     var row = obj.parentNode.parentNode;
@@ -31,7 +44,7 @@ function addTDs() {
     cell2.innerHTML = cells[1].innerHTML;
     cell3.innerHTML = cells[2].innerHTML;
     cell4.innerHTML = cells[3].innerHTML;
-    cell5.innerHTML = "<button class=\"blackbutton2\"onclick=\"restore(this);this.parentNode.parentNode.parentNode.removeChild(this.parentNode.parentNode)\">RESTORE IT</button><a href=\"../html/specificdetailpage-registered.html\"><button class=\"whitebutton2\">VIEW DETAILS</button></a>"
+    cell5.innerHTML = "<button class=\"blackbutton2\"onclick=\"restore(this);this.parentNode.parentNode.parentNode.removeChild(this.parentNode.parentNode)\">RESTORE IT</button><a href=\"specificdetailpage-registered.html\"><button class=\"whitebutton2\">VIEW DETAILS</button></a>"
     cell1.className = "td1";
     cell2.className = "td2";
     cell3.className = "td3";
@@ -55,7 +68,7 @@ function addTDs2() {
     cell2.innerHTML = cells[1].innerHTML;
     cell3.innerHTML = cells[2].innerHTML;
     cell4.innerHTML = cells[3].innerHTML;
-    cell5.innerHTML = "<button class=\"blackbutton2\" onclick=\"getTDs(this);this.parentNode.parentNode.parentNode.removeChild(this.parentNode.parentNode)\">DELETE IT</button><a href=\"../html/specificdetailpage-registered.html\"><button class=\"whitebutton2\">VIEW DETAILS</button></a>"
+    cell5.innerHTML = "<button class=\"blackbutton2\" onclick=\"getTDs(this);this.parentNode.parentNode.parentNode.removeChild(this.parentNode.parentNode)\">DELETE IT</button><a href=\"specificdetailpage-registered.html\"><button class=\"whitebutton2\">VIEW DETAILS</button></a>"
     cell1.className = "td1";
     cell2.className = "td2";
     cell3.className = "td3";
